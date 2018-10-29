@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas学习</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+</body>
+<script>
+    // 获取dom节点
+    let canvas = document.getElementById('canvas');
+    // 定义画布的类型
+    let ctx = canvas.getContext('2d');
+    // 填充颜色
+    ctx.fillStyle = 'skyblue';
+    // 绘制
+    ctx.fillRect(10, 10, 100, 100);
+    // 
+</script>
+
+</html>
