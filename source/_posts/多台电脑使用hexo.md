@@ -3,7 +3,7 @@ title: 解决多台电脑使用hexo的问题
 tag: hexo
 ---
 在使用hexo的过程中，我开始是在上家公司写的东西全部提交到了hexo，以为就好了，结果换新公司从新电脑拉下来后不知道怎么搞了，原先的那些东西都没了，为了解决这个，我在度娘上找到了方案，写在这里，做下记录
-![](http://phcp7w60f.bkt.clouddn.com/7c96498fee2dace1c961c1fd3a5a410b.gif)
+![](http://phcp7w60f.bkt.clouddn.com/hexo.gif)
 
 
 ## 解决方案
