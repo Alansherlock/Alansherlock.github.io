@@ -82,3 +82,38 @@ tag: HTTP
 
 > 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该 层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层 时会把对应的首部消去。
 > 这种把数据信息包装起来的做法称为封装（encapsulate）。
+
+## 与 HTTP 关系密切的协议 : IP、TCP 和 DNS
+
+1. IP是一种协议，位于网络层；区别于平常说的IP地址，而IP传输又必须有传输需要的地址 IP地址和MAC地址，IP地址会变，MAC地址基本不变；IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定 地址。
+
+> ARP 是一种用以解析地址的协议，根据通信方 的 IP 地址就可以反查出对应的 MAC 地址,以下为ARP协议的解析图
+
+![](http://phcp7w60f.bkt.clouddn.com/ARP%E5%8D%8F%E8%AE%AE%E8%A7%A3%E6%9E%90%E5%9B%BE.jpg)
+
+2. TCP 协议， TCP协议位于传输层，提供可靠的字节流服务；
+
+> 所谓的字节流服务（Byte Stream Service）是指，为了方便传输，将大 块数据分割成以报文段（segment）为单位的数据包进行管理。
+> TCP 协议为了更容易传送大数据才把数据分割，而且 TCP 协议能够 确认数据最终是否送达到对方,采用的是 **三次握手** 来确认。
+
+`握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）。
+发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后， 回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发 送端再回传一个带 ACK 标志的数据包，代表“握手”结束。`
+
+![](http://phcp7w60f.bkt.clouddn.com/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg)
+
+## 负责域名解析的 DNS 服务
+
+> DNS（Domain Name System）服务是和 HTTP 协议一样位于`应用层`的 协议。它提供域名到 IP 地址之间的解析服务。
+> DNS 协议提供通过域名 查找 IP 地址，或逆向从 IP 地址反查域名的服务
+
+![http请求示意图](http://phcp7w60f.bkt.clouddn.com/http%E8%AF%B7%E6%B1%82%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg)
+
+## URL 和URI
+
+`URI 用字符串标识某一互联网资源，而 URL 表示资源的地点（互联网上所处的位置）。可见 URL 是 URI 的子集。`
+
+1. URI 格式
+
+> 表示指定的 URI，要使用涵盖全部必要信息的绝对 URI、绝对 URL 以 及相对 URL。相对 URL，是指从浏览器中基本 URI 处指定的 URL，形如 /image/logo.gif。
+
+![](http://phcp7w60f.bkt.clouddn.com/URI%E7%BB%9D%E5%AF%B9%E6%A0%BC%E5%BC%8F.jpg)
