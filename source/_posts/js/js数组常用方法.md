@@ -94,3 +94,46 @@ console.log(filter1);//[ 1 ]
 ## 改变原数组的方法
 
 ### forEach()
+### pop()
+### push()
+### reverse()
+### shift()
+### unshift()
+### sort()
+### splice()
+
+## 数组去重
+
+### reduce去重
+``` JavaScript
+const distinct = arr => arr.sort().reduce( (init, current) => {
+    
+    if (init.length === 0 || init[init.length - 1] !== current) {
+        init.push( current );
+    }
+    return init;
+}, []);
+
+let arr = [1,2,1,2,3,5,4,5,3,4,4,4,4];
+distinct(arr); // [1, 2, 3, 4, 5]
+```
+
+### filter去重
+``` JavaScript
+const distinct = arr => arr.filter( (element, index, self) => {
+    return self.indexOf( element ) === index;
+});
+
+let arr = [1,2,1,2,3,5,4,5,3,4,4,4,4];
+distinct(arr); // [1, 2, 3, 5, 4]
+```
+
+## 多维数组降维
+
+``` JavaScript
+const flattenDeep = arr => Array.isArray(arr)
+  ? arr.reduce( (a, b) => [...a, ...flattenDeep(b)] , [])
+  : [arr]
+
+flattenDeep([1, [[2], [3, [4]], 5]]); // [1, 2, 3, 4, 5]
+```
