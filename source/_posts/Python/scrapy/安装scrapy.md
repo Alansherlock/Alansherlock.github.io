@@ -1,6 +1,6 @@
 ---
 title: 安装scrapy
-tag: python
+tag: Python
 ---
 
 1. pip install scrapy (还可以用pip3)
