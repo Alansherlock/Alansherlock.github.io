@@ -2,7 +2,7 @@
 title: canvas水印
 tag: canvas
 ---
-上次写了canvas水印现在整理下，方便下次需要拿取出来使用
+上次写了canvas水印现在整理下，方便下次需要拿取出来使用，也可以供封装为组件
 
 ##canvas水印
 
