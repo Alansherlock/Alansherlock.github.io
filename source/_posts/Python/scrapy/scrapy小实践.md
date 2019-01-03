@@ -31,6 +31,10 @@ class BooksSpider(scrapy.Spider):
                 'name':name,
                 'author':author
             }
+            # 这段是可以的，但是由于数据太多抓取困难，卡死了，回头再研究下
+            # next_url = response.css('.pages .pagelink a::attr(href)').extract_first()
+            # if next_url:
+            #      yield scrapy.Request(url=next_url, callback=self.parse)
 ```
 
 3. 执行`scrapy crawl books -o books.csv`,即可生成对应的books.csv文件
