@@ -4,6 +4,8 @@ tag: canvas
 ---
 上次写了canvas水印现在整理下，方便下次需要拿取出来使用
 
+##canvas水印
+
 ``` html
 <template>
     <div id="watermark">
