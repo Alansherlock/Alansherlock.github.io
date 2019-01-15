@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta name="generator" content="Hexo 3.8.0"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="时间不在于你拥有多少，而在于你怎样使用"><title>了解WEB及网络基础 | 小小博客</title><link rel="stylesheet" type="text/css" href="//fonts.neworld.org/css?family=Source+Code+Pro"><link rel="stylesheet" type="text/css" href="/css/style.css?v=2.0.1"><link rel="stylesheet" type="text/css" href="/css/highlight.css?v=2.0.1"><link rel="Shortcut Icon" href="/favicon.ico"><link rel="bookmark" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">了解WEB及网络基础</h1><a id="logo" href="/.">小小博客</a><p class="description">时间不在于你拥有多少，而在于你怎样使用</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 历史</i></a><a href="/about/"><i class="fa fa-user"> 关于我</i></a></div><div id="search-form"><div id="result-mask" class="hide"></div><label><input id="search-key" type="text" autocomplete="off" placeholder="请输入搜索关键词"></label><div id="result-wrap" class="hide"><div id="search-result"></div></div><div class="hide"><template id="search-tpl"><div class="item"><a href="/{path}" title="{title}"><div class="title">{title}</div><div class="time">{date}</div><div class="tags">{tags}</div></a></div></template></div></div></div><div id="layout" class="layout-g"><div class="layout-l"><div class="content_container"><div class="post"><h1 class="post-title">了解WEB及网络基础</h1><div class="post-meta"><a href="/2019/01/15/http图解/http/#comments" class="comment-count"></a><p><span class="date">Jan 15, 2019</span><span><i id="busuanzi_container_page_pv"><i id="busuanzi_value_page_pv"></i><i>点击</i></i></span></p></div><div class="post-content"><p>开始看Http图解了，上次就大概在手机上看了下，没做笔记了解的其实也不深入,先从网络基础开始学习。</p>
+<h2 id="使用Http协议访问WEB"><a href="#使用Http协议访问WEB" class="headerlink" title="使用Http协议访问WEB"></a>使用Http协议访问WEB</h2><ol>
+<li>当在浏览器输入URL后发生了什么？</li>
+</ol>
+<blockquote>
+<p>在日常的操作中，输入后就会有个页面展示出来，但是这个可以再往深入一点，输入后点击请求的这边叫客户端，然后连接到另外一边的服务器，服务器再响应回来数据从而有数据展示；</p>
+</blockquote>
+<p><code>这种通过发送请求获取服务器资源的 Web 浏览器等，都可称为客 户端（client）</code></p>
+<p><code>Web 使用一种名为 HTTP（HyperText Transfer Protocol，超文本传输协 议 1）的协议作为规范，完成从客户端到服务器端等一系列运作流
+程。而协议是指规则的约定。可以说，Web 是建立在 HTTP 协议上通 信的。</code></p>
+<h2 id="HTTP-的诞生"><a href="#HTTP-的诞生" class="headerlink" title="HTTP 的诞生"></a>HTTP 的诞生</h2><p>好像不想了解，一堆历史，虽然吹水好像蛮有用，emmmm;</p>
+<ol>
+<li>HTTP/0.9</li>
+</ol>
+<blockquote>
+<p>HTTP 于 1990 年问世。那时的 HTTP 并没有作为正式的标准被建立。 现在的 HTTP 其实含有 HTTP1.0 之前版本的意思，因此被称为 HTTP/0.9。</p>
+</blockquote>
+<ol start="2">
+<li>HTTP/1.0</li>
+</ol>
+<blockquote>
+<p>HTTP 正式作为标准被公布是在 1996 年的 5 月，版本被命名为 HTTP/1.0，并记载于 RFC1945。虽说是初期标准，但该协议标准至今 仍被广泛使用在服务器端。</p>
+</blockquote>
+<ol start="3">
+<li>HTTP/1.1</li>
+</ol>
+<blockquote>
+<p>1997 年 1 月公布的 HTTP/1.1 是目前主流的 HTTP 协议版本。当初的 标准是 RFC2068，之后发布的修订版 RFC2616 就是当前的最新版本。</p>
+</blockquote>
+<ol start="4">
+<li>后续还有http2.0等一些新协议诞生…</li>
+</ol>
+<h2 id="TCP-IP-协议族"><a href="#TCP-IP-协议族" class="headerlink" title="TCP/IP 协议族"></a>TCP/IP 协议族</h2><ol>
+<li>协议的定义</li>
+</ol>
+<blockquote>
+<p>如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为 协议（protocol）</p>
+</blockquote>
+<p><img src="http://phcp7w60f.bkt.clouddn.com/http1.jpg" alt=""></p>
+<p>上图为TCP/IP 的集合，TCP/IP 实际上并不只有TCP/IP 这两种，但在日常也有一些人直接用来表示TCP/IP这两种协议；</p>
+<h2 id="TCP-IP-的分层管理"><a href="#TCP-IP-的分层管理" class="headerlink" title="TCP/IP 的分层管理"></a>TCP/IP 的分层管理</h2><blockquote>
+<p>TCP/IP 协议族按层次分别分 为以下 4 层：应用层、传输层、网络层和数据链路层。<br>如果互联网只由一个协议统筹，某个地方需要改变设计时，就必须把所有部分整体替换掉。而分 层之后只需把变动的层替换掉即可。(<code>理解则是互相之间耦合度不会高，在调整和修改的过程中工作量和复杂度降低，方便操作</code>)</p>
+</blockquote>
+<ol>
+<li>应用层</li>
+</ol>
+<blockquote>
+<p>决定了向用户提供应用服务时通信的活动。TCP/IP 协议族内预存了各类通用的应用服务。比如，FTP（File Transfer Protocol，文件传输协议）和 DNS（Domain Name System，域 名系统）服务就是其中两类。<br><strong>HTTP 协议也处于应用层。</strong></p>
+</blockquote>
+<ol start="2">
+<li>传输层</li>
+</ol>
+<blockquote>
+<p>传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据 传输。<br>在传输层有两个性质不同的协议：TCP（Transmission Control Protocol，传输控制协议）和 UDP（User Data Protocol，用户数据报 协议）。</p>
+</blockquote>
+<ol start="3">
+<li>网络层（又名网络互连层）</li>
+</ol>
+<blockquote>
+<p>网络层用来处理在网络上流动的数据包。数据包是网络传输的最小数 据单位。该层规定了通过怎样的路径（所谓的传输路线）到达对方计 算机，并把数据包传送给对方。<br>与对方计算机之间通过多台计算机或网络设备进行传输时，网络层所 起的作用就是<code>在众多的选项内选择一条传输路线</code>。</p>
+</blockquote>
+<ol start="4">
+<li>链路层（又名数据链路层，网络接口层）</li>
+</ol>
+<blockquote>
+<p>用来处理连接网络的硬件部分。包括控制操作系统、硬件的设备驱 动、NIC（Network Interface Card，网络适配器，即网卡），及光纤等 物理可见部分（还包括连接器等一切传输媒介）。<code>硬件上的范畴均在 链路层的作用范围之内</code>。</p>
+</blockquote>
+<h2 id="TCP-IP-通信传输流"><a href="#TCP-IP-通信传输流" class="headerlink" title="TCP/IP 通信传输流"></a>TCP/IP 通信传输流</h2><p><img src="http://phcp7w60f.bkt.clouddn.com/http2.jpg" alt=""></p>
+<blockquote>
+<p>如上图，这图画的贼清楚，顺便表达了我的内心想法，哈哈哈,先从客户端出来再进去服务器，再从服务器出来再进客户端；<br>我们用 HTTP 举例来说明，首先作为发送端的客户端在应用层 （HTTP 协议）发出一个想看某个 Web 页面的 HTTP 请求。<br>接着，为了传输方便，在传输层（TCP 协议）把从应用层处收到的数 据（HTTP 请求报文）进行分割，并在各个报文上打上标记序号及端 口号后转发给网络层。<br>在网络层（IP 协议），增加作为通信目的地的 MAC 地址后转发给链 路层。这样一来，发往网络的通信请求就准备齐全了。<br>接收端的服务器在链路层接收到数据，按序往上层发送，一直到应用 层。当传输到应用层，才能算真正接收到由客户端发送过来的 HTTP 请求。</p>
+</blockquote>
+<p><img src="http://phcp7w60f.bkt.clouddn.com/http3.jpg" alt=""></p>
+<blockquote>
+<p>发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该 层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层 时会把对应的首部消去。<br>这种把数据信息包装起来的做法称为封装（encapsulate）。</p>
+</blockquote>
+<h2 id="与-HTTP-关系密切的协议-IP、TCP-和-DNS"><a href="#与-HTTP-关系密切的协议-IP、TCP-和-DNS" class="headerlink" title="与 HTTP 关系密切的协议 : IP、TCP 和 DNS"></a>与 HTTP 关系密切的协议 : IP、TCP 和 DNS</h2><ol>
+<li>IP是一种协议，位于网络层；区别于平常说的IP地址，而IP传输又必须有传输需要的地址 IP地址和MAC地址，IP地址会变，MAC地址基本不变；IP 地址指明了节点被分配到的地址，MAC 地址是指网卡所属的固定 地址。</li>
+</ol>
+<blockquote>
+<p>ARP 是一种用以解析地址的协议，根据通信方 的 IP 地址就可以反查出对应的 MAC 地址,以下为ARP协议的解析图</p>
+</blockquote>
+<p><img src="http://phcp7w60f.bkt.clouddn.com/ARP%E5%8D%8F%E8%AE%AE%E8%A7%A3%E6%9E%90%E5%9B%BE.jpg" alt=""></p>
+<ol start="2">
+<li>TCP 协议， TCP协议位于传输层，提供可靠的字节流服务；</li>
+</ol>
+<blockquote>
+<p>所谓的字节流服务（Byte Stream Service）是指，为了方便传输，将大 块数据分割成以报文段（segment）为单位的数据包进行管理。<br>TCP 协议为了更容易传送大数据才把数据分割，而且 TCP 协议能够 确认数据最终是否送达到对方,采用的是 <strong>三次握手</strong> 来确认。</p>
+</blockquote>
+<p><code>握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）。
+发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后， 回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发 送端再回传一个带 ACK 标志的数据包，代表“握手”结束。</code></p>
+<p><img src="http://phcp7w60f.bkt.clouddn.com/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg" alt=""></p>
+<h2 id="负责域名解析的-DNS-服务"><a href="#负责域名解析的-DNS-服务" class="headerlink" title="负责域名解析的 DNS 服务"></a>负责域名解析的 DNS 服务</h2><blockquote>
+<p>DNS（Domain Name System）服务是和 HTTP 协议一样位于<code>应用层</code>的 协议。它提供域名到 IP 地址之间的解析服务。<br>DNS 协议提供通过域名 查找 IP 地址，或逆向从 IP 地址反查域名的服务</p>
+</blockquote>
+<p><img src="http://phcp7w60f.bkt.clouddn.com/http%E8%AF%B7%E6%B1%82%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg" alt="http请求示意图"></p>
+<h2 id="URL-和URI"><a href="#URL-和URI" class="headerlink" title="URL 和URI"></a>URL 和URI</h2><p><code>URI 用字符串标识某一互联网资源，而 URL 表示资源的地点（互联网上所处的位置）。可见 URL 是 URI 的子集。</code></p>
+<ol>
+<li>URI 格式</li>
+</ol>
+<blockquote>
+<p>表示指定的 URI，要使用涵盖全部必要信息的绝对 URI、绝对 URL 以 及相对 URL。相对 URL，是指从浏览器中基本 URI 处指定的 URL，形如 /image/logo.gif。</p>
+</blockquote>
+<p><img src="http://phcp7w60f.bkt.clouddn.com/URI%E7%BB%9D%E5%AF%B9%E6%A0%BC%E5%BC%8F.jpg" alt=""></p>
+</div><div class="tags"><a href="/tags/HTTP/">HTTP</a></div><div class="post-share"><div class="bdsharebuttonbox"><span style="float:left;line-height: 28px;height: 28px;font-size:16px;font-weight:blod">分享到：</span><a href="#" data-cmd="more" class="bds_more"></a><a href="#" data-cmd="mshare" title="分享到一键分享" class="bds_mshare"></a><a href="#" data-cmd="fbook" title="分享到Facebook" class="bds_fbook"></a><a href="#" data-cmd="twi" title="分享到Twitter" class="bds_twi"></a><a href="#" data-cmd="linkedin" title="分享到linkedin" class="bds_linkedin"></a><a href="#" data-cmd="youdao" title="分享到有道云笔记" class="bds_youdao"></a><a href="#" data-cmd="evernotecn" title="分享到印象笔记" class="bds_evernotecn"></a><a href="#" data-cmd="weixin" title="分享到微信" class="bds_weixin"></a><a href="#" data-cmd="qzone" title="分享到QQ空间" class="bds_qzone"></a><a href="#" data-cmd="tsina" title="分享到新浪微博" class="bds_tsina"></a></div></div><div class="post-nav"><a href="/2019/01/15/canvas/canvas水印/" class="pre">canvas水印</a><a href="/2019/01/15/js/js数组常用方法/" class="next">js数组常用方法</a></div><div id="comments"><div id="lv-container" data-id="city" data-uid="MTAyMC8zNjIyNS8xMjc2MA=="></div></div></div></div></div><div class="layout-r"><div id="sidebar"><div class="search-pla"></div><div id="toc" class="widget"><div class="widget-title"><i class="fa fa-fei">文章目录</i></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#使用Http协议访问WEB"><span class="toc-text">使用Http协议访问WEB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HTTP-的诞生"><span class="toc-text">HTTP 的诞生</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP-协议族"><span class="toc-text">TCP/IP 协议族</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP-的分层管理"><span class="toc-text">TCP/IP 的分层管理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TCP-IP-通信传输流"><span class="toc-text">TCP/IP 通信传输流</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#与-HTTP-关系密切的协议-IP、TCP-和-DNS"><span class="toc-text">与 HTTP 关系密切的协议 : IP、TCP 和 DNS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#负责域名解析的-DNS-服务"><span class="toc-text">负责域名解析的 DNS 服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#URL-和URI"><span class="toc-text">URL 和URI</span></a></li></ol></div><div class="widget"><div class="widget-title"><i class="fa fa-xie"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/Python/爬取酷狗付费歌曲/">爬取酷狗付费歌曲</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/正则/身份证验证/">书写一个身份证校验的正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/正则/网址校验正则/">网址校验正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/正则/正则匹配去除某些不必要的字段/">利用正则校验匹配去掉一些不必要的数字或字母等</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/正则/校验手机号正则/">书写一个手机号校验的正则</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/微信/微信分享/">微信分享</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/其他/获取本地IP所有地理位置及所在城市/">获取本机IP及所有城市</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/其他/移动端调试开启Vconsole/">移动端开启调试</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/其他/移动端解决键盘收起留白/">移动端解决键盘收起留白</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/其他/移动端小知识/">移动端笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-biao"> 标签</i></div><div class="tagcloud"><a href="/tags/nginx/" style="font-size: 15px;">nginx</a> <a href="/tags/canvas/" style="font-size: 15px;">canvas</a> <a href="/tags/JavaScript/" style="font-size: 15px;">JavaScript</a> <a href="/tags/react/" style="font-size: 15px;">react</a> <a href="/tags/vue/" style="font-size: 15px;">vue</a> <a href="/tags/webpack/" style="font-size: 15px;">webpack</a> <a href="/tags/HTTP/" style="font-size: 15px;">HTTP</a> <a href="/tags/other/" style="font-size: 15px;">other</a> <a href="/tags/hexo/" style="font-size: 15px;">hexo</a> <a href="/tags/前端小本/" style="font-size: 15px;">前端小本</a> <a href="/tags/移动端/" style="font-size: 15px;">移动端</a> <a href="/tags/正则/" style="font-size: 15px;">正则</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-archive"> 归档</i></div><ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">一月 2019</a></li></ul></div></div></div></div><a id="totop" href="#top"></a><div id="footer"><div class="footer-info"><p>  |  <span>博主微信：V315746449 （记得备注哟）</span> |  <span>联系博主： </span><a rel="nofollow" target="_blank" href="https://github.com/Alansherlock"> Alan.   </a></p></div></div></div><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f72a56f6b9be98f03be5fbbc3505d8d6";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+  })();
+</script><script type="text/javascript" src="/js/search.json.js?v=2.0.1"></script><script type="text/javascript" src="/js/toctotop.js?v=2.0.1" async></script><script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","weixin","tsina","qzone","linkedin","fbook","twi","print","renren","sqq","evernotecn","bdysc","tqq","tqf","bdxc","kaixin001","tieba","douban","bdhome","thx","ibaidu","meilishuo","mogujie","diandian","huaban","duitang","hx","fx","youdao","sdo","qingbiji","people","xinhua","mail","isohu","yaolan","wealink","ty","iguba","h163","copy"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["tsina","qzone","weixin","fbook","twi","linkedin","youdao","evernotecn","mshare"]}};with(document)0[(getElementsByTagName('head')[0]||head).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script><script>(function(d, s) {
+  var j, e = d.getElementsByTagName('body')[0];
+  if (typeof LivereTower === 'function') { return; }
+  j = d.createElement(s);
+  j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+  j.async = true;
+  e.appendChild(j);
+})(document, 'script');
+</script></body></html>
