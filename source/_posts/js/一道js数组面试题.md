@@ -29,6 +29,26 @@ let newlist= keys.map(key=>{
     return {id:key,list:temp}
 })
 console.log(JSON.stringify(newlist));
+function mapObj(list) {
+    var obj = {};
+    for (let item of list) {
+        console.log(!obj[item.id]);
+        if (!obj[item.id]) {
+            console.log(item.id);
+            obj[item.id] = item.list;
+        }
+        else {
+            obj[item.id] = obj[item.id].concat(item.list);
+            console.log(obj[item.id]);
+        }
+    }
+    return Object.keys(obj).map(key => {
+        return {
+            id: key,
+            list: obj[key]
+        }
+    });
+}
 </script>
 </body>
 </html>
