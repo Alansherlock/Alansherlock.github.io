@@ -8,7 +8,9 @@ tag: github
 
 ``` js
     // 1080为我自己VPN本地代理启用的端口号，可替代为自己VPN的端口号
-    git config --global http.proxy "localhost:1080"
+    // git config --global http.proxy "localhost:1080"
+    git config --global http.proxy 'socks5://127.0.0.1:1080'
+    git config --global https.proxy 'socks5://127.0.0.1:1080'
 ```
 
 执行完楼上的命令后，即可`git push`,心情愉悦！！！
