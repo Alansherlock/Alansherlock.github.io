@@ -4,7 +4,13 @@ tag: git
 ---
 在多次谷歌和百度后，终于在尝试中试出了方案，如下：
 
+## window中的配置
 
+### 文件的位置
+
+.git 存在于项目中
+.ssh 则是在C盘的用户路径下
+ssh_config存在于C盘Program Files中的Git/etc/ssh
 
 ``` js
 Host gogs.dtyunxi.cn
@@ -56,3 +62,6 @@ Host second.gogs.dtyunxi.cn
 	url = ssh://git@second.gogs.dtyunxi.cn:10022/changan/changan-b2c-web-h5.git
 	fetch = +refs/heads/*:refs/remotes/origin/*
 ```
+
+### Mac中的配置
+
