@@ -39,7 +39,6 @@ tag: HTTP
 
 > 如何探测到通信目标、由哪一边先发起通信、使用哪种语言进行通信、怎样结束通信等规则都需要事先确定。不同的硬件、操作系统之间的通信，所有的这一切都需要一种规则。而我们就把这种规则称为 协议（protocol）
 
-![](http://phcp7w60f.bkt.clouddn.com/http1.jpg)
 
 上图为TCP/IP 的集合，TCP/IP 实际上并不只有TCP/IP 这两种，但在日常也有一些人直接用来表示TCP/IP这两种协议；
 
@@ -69,7 +68,6 @@ tag: HTTP
 
 ## TCP/IP 通信传输流
 
-![](http://phcp7w60f.bkt.clouddn.com/http2.jpg)
 
 > 如上图，这图画的贼清楚，顺便表达了我的内心想法，哈哈哈,先从客户端出来再进去服务器，再从服务器出来再进客户端；
 > 我们用 HTTP 举例来说明，首先作为发送端的客户端在应用层 （HTTP 协议）发出一个想看某个 Web 页面的 HTTP 请求。
@@ -78,7 +76,6 @@ tag: HTTP
 > 接收端的服务器在链路层接收到数据，按序往上层发送，一直到应用 层。当传输到应用层，才能算真正接收到由客户端发送过来的 HTTP 请求。
 
 
-![](http://phcp7w60f.bkt.clouddn.com/http3.jpg)
 
 > 发送端在层与层之间传输数据时，每经过一层时必定会被打上一个该 层所属的首部信息。反之，接收端在层与层传输数据时，每经过一层 时会把对应的首部消去。
 > 这种把数据信息包装起来的做法称为封装（encapsulate）。
@@ -89,7 +86,6 @@ tag: HTTP
 
 > ARP 是一种用以解析地址的协议，根据通信方 的 IP 地址就可以反查出对应的 MAC 地址,以下为ARP协议的解析图
 
-![](http://phcp7w60f.bkt.clouddn.com/ARP%E5%8D%8F%E8%AE%AE%E8%A7%A3%E6%9E%90%E5%9B%BE.jpg)
 
 2. TCP 协议， TCP协议位于传输层，提供可靠的字节流服务；
 
@@ -99,14 +95,12 @@ tag: HTTP
 `握手过程中使用了 TCP 的标志（flag） —— SYN（synchronize） 和 ACK（acknowledgement）。
 发送端首先发送一个带 SYN 标志的数据包给对方。接收端收到后， 回传一个带有 SYN/ACK 标志的数据包以示传达确认信息。最后，发 送端再回传一个带 ACK 标志的数据包，代表“握手”结束。`
 
-![](http://phcp7w60f.bkt.clouddn.com/TCP%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.jpg)
 
 ## 负责域名解析的 DNS 服务
 
 > DNS（Domain Name System）服务是和 HTTP 协议一样位于`应用层`的 协议。它提供域名到 IP 地址之间的解析服务。
 > DNS 协议提供通过域名 查找 IP 地址，或逆向从 IP 地址反查域名的服务
 
-![http请求示意图](http://phcp7w60f.bkt.clouddn.com/http%E8%AF%B7%E6%B1%82%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg)
 
 ## URL 和URI
 
@@ -115,5 +109,3 @@ tag: HTTP
 1. URI 格式
 
 > 表示指定的 URI，要使用涵盖全部必要信息的绝对 URI、绝对 URL 以 及相对 URL。相对 URL，是指从浏览器中基本 URI 处指定的 URL，形如 /image/logo.gif。
-
-![](http://phcp7w60f.bkt.clouddn.com/URI%E7%BB%9D%E5%AF%B9%E6%A0%BC%E5%BC%8F.jpg)
