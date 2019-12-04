@@ -2,7 +2,7 @@
 title: 一道数组面试题
 tag: JavaScript
 ---
-# 我们来爬一爬
+用于合并数组对象，例子如下：
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +20,7 @@ let oldlist = [
     {id:2,list:[4,5]},
     {id:1,list:[4,5]}
 ];
+// 方法一
 let keys = Array.from(new Set(oldlist.map(item => item.id)))
 let newlist= keys.map(key=>{
     var temp = new Array();
@@ -29,6 +30,7 @@ let newlist= keys.map(key=>{
     return {id:key,list:temp}
 })
 console.log(JSON.stringify(newlist));
+// 方法二
 function mapObj(list) {
     var obj = {};
     for (let item of list) {
